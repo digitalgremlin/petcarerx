@@ -1,0 +1,178 @@
+body#mw_home_page {
+  div#body_container {
+    > div.mw_search {
+      @include box(vertical, center, start);
+      @include bg-light-blue;
+      height: 55px;
+      padding: 0 12px;
+      > div {
+        > div {
+          > input {
+            height: 35px;
+            padding-left: 30px;
+            background: image-url("form/search.png") no-repeat 10px 9px #fff;
+            border: 1px solid darken($light_blue, 10%);
+            border-radius: 18px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) inset, 0 1px 0 rgba(255, 255, 255, 0.3);
+          }
+        }
+        > input {
+          display: none;
+        }
+      }
+    }
+    > div#right_container {
+      > div#crausal {
+        > div.panel_outer {
+          float: left;
+          > div#mygallery {
+            > div.belt {
+              float: left;
+              height: 114px;
+              overflow: hidden;
+              > div.panel {
+                float: left;
+                width: 320px;
+                height: auto;
+                > img {
+                  float: left;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+            > div[data-ur-carousel-component="dots"] {
+              float: left;
+              height: 20px;
+              margin: 7px 0 0 0;
+              > div {
+                width: 9px;
+                height: 9px;
+                background: $dark_blue;
+                margin: 0 2px;
+              }
+            }
+          }
+        }
+      }
+      > div#defaultHeader {
+        @include inline-block;
+        margin: 5px 0 13px 0;
+        padding: 0 15px;
+        > h1 {
+          @include title-h1;
+          margin: 0 0 10px 0;
+          font-size: 20px;
+        }
+        > div {
+          font-size: 13px;
+        }
+      }
+      > div#BodyContainer_arrayContainer {
+        > div.common_box {
+          > div.heading_blue {
+            @include bg-block-head;
+            > h3, > h2 {
+              @include title-block-head;
+            }
+          }
+          > div.inner_section {
+            > ul {
+              @include box(horizontal, start, start);
+              width: 320px;
+              height: 170px;
+              padding: 0 5px 0 15px;
+              overflow-y: hidden;
+              > li {
+                @include box-flex(0);
+                width: 120px;
+                height: 160px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+                margin: 0 10px 0 0;
+                > div.thumb_nail {
+                  > a {
+                    @include box(horizontal, center, center);
+                    width: 118px;
+                    height: 80px;
+                    border-bottom: 1px solid #ddd;
+                    > img {
+                      @include box-flex(0);
+                      width: 85%;
+                      height: auto;
+                      margin: 0 0 0 5px;
+                      padding: 0;
+                    }
+                  }
+                }
+                > div[class^="iop"] {
+                  display: none;
+                }
+                > div.row {
+                  width: 120px;
+                  > h4 {
+                    @include full-width;
+                    max-height: 40px;
+                    margin: 7px 0 5px 0;
+                    padding: 0 10px;
+                    font-size: 12px;
+                    line-height: 1.1em;
+                    text-align: center;
+                    overflow: hidden;
+                    > a {
+                      color: $darkest_blue;
+                    }
+                  }
+                  > strong {
+                    display: none !important;
+                  }
+                  > div.poll {
+                    @include box(horizontal, center, start);
+                    padding: 0 !important;
+                    > div.grey {
+                      @include box-flex(0);
+                      width: 75px;
+                      height: 14px;
+                      background: image-url("icons/poll_bg.gif") repeat-x;
+                      > div.orange {
+                        width: 75px;
+                        height: 14px;
+                        background: image-url("icons/poll_bg_h.gif") repeat-x;
+                      }
+                    }
+                  }
+                }
+                > span {
+                  display: none !important;
+                }
+                > div.buy_now {
+                  display: none !important;
+                }
+              }
+              > li:nth-child(1) > div.row > div.poll > div.grey > div.orange {
+                width: 60px;
+              }
+              > li:nth-child(4) > div.row > div.poll > div.grey > div.orange {
+                width: 60px;
+              }
+              > li.link {
+                @include inline-block;
+                margin-right: 15px;
+                > a {
+                  @include full-width;
+                  @include inline-block;
+                  height: 160px;
+                  background: image-url("icons/plus_view_all.png") no-repeat center center;
+                  > span {
+                    display: none !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

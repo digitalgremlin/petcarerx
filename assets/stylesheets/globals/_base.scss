@@ -1,0 +1,79 @@
+// Site-wide styles go here
+// What shouldn't go here
+//   - global declartive classes, mixins, or variables, that goes in -lib.scss
+
+@import "bourbon/_bourbon";
+
+html {
+  height: 100%;
+  overflow: auto !important;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  background: #fff;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.2em;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #5278b2;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+a, a:link {
+  -webkit-tap-highlight-color: rgba(225, 244, 204, 0.5);
+}
+
+img {
+  max-width: 100%;
+}
+
+// Set content with 100% of width
+div, ul, li, h1, h2, h3, h4, p, span {
+  @include box-sizing(border-box);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"], input[type="reset"], input[type="number"], input[type="password"], select {
+  @include appearance(none);
+  @include box-sizing(border-box);
+  @include box(horizontal, start, center);
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-family: "Helvetica Neue", Helvetica, Verdana;
+  font-size: 13px;
+  color: #555;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+select {
+  background: image-url("form/select.png") no-repeat center right #fff;
+}
+
+
+

@@ -1,0 +1,438 @@
+body#mw_product_page {
+  div#body_container {
+    > div#filter {
+      > div {
+        > div.back_link {
+          > div.bredcrumb {
+            @include box(horizontal, start, center);
+            @include bg-light-blue;
+            height: 30px;
+            padding: 0 15px;
+            overflow-y: hidden;
+            > ul {
+              width: 650px;
+              > li {
+                display: inline;
+                font-size: 12px;
+                > a {
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+        > div.mw_title{
+          > h1 {
+            @include title-h1;
+            padding: 10px 15px;
+            font-size: 18px;
+            line-height: 1.2em;
+          }
+        }
+        > div.mw_gallery {
+          float: left;
+          height: 310px;
+          overflow: hidden;
+          > ul {
+            float: left;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            > li {
+              float: left;
+              width: 320px;
+              height: auto;
+              > img {
+                float: left;
+                @include box-sizing(border-box);
+                width: 290px;
+                height: auto;
+                margin: 0 0 0 15px;
+                border: 1px solid #ddd;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+              }
+            }
+          }
+          > div {
+            display: block;
+            float: left;
+            height: 20px;
+            margin: 7px 0 0 0;
+            position: relative;
+            z-index: 10000;
+            > div {
+              width: 9px;
+              height: 9px;
+              background: $dark_blue;
+              margin: 0 2px;
+            }
+            > div[data-ur-state='active']{
+
+            }
+          }
+        }
+        > div.mw_reviews_price {
+          @include inline-block;
+          margin: 10px 0 0 0;
+          > div.mw_reviews {
+            @include box(horizontal, justify, center);
+            padding: 0 15px;
+            > ul {
+              @include box-flex(0);
+              width: 123px;
+              height: 24px;
+              background: image-url("icons/translucent.gif") no-repeat;
+              > li {
+
+              }
+            }
+            > span {
+              @include box-flex(0);
+              color: #777;
+            }
+          }
+          > div.price_sec {
+            padding: 0 15px;
+            > div.mw_row1 {
+              > strong {
+                @include inline-block;
+                margin: 5px 0 3px 0;
+                font-size: 18px;
+              }
+            }
+            > div.mw_row2 {
+              > span {
+                font-size: 13px;
+                color: #777;
+              }
+            }
+          }
+        }
+        > div.mw_options {
+          @include bg-light-gray;
+          margin: 10px 0 0 0;
+          > div {
+            > ul {
+              padding-top: 15px;
+              > li {
+                > div.content {
+                  padding: 0 15px;
+                  > span.numbers {
+                    display: none;
+                  }
+                  > strong {
+                    @include full-width;
+                  }
+                  > div {
+                    > select {
+                      @include full-width;
+                      display: block!important;
+                      height: 35px;
+                      margin: 3px 0 10px 0;
+                    }
+                    > input {
+                      height: 35px;
+                      margin: 3px 0 10px 0;
+                    }
+                    > div {
+                      display: none!important;
+                    }
+                  }
+                }
+              }
+              > li.last {
+                > div.mw_row1 {
+                  @include box(horizontal, justify, start);
+                  padding: 0 15px 15px 15px;
+                  > div.mw_col1 {
+                    @include box-flex(1);
+                    > strong:first-of-type {
+                      @include full-width;
+                      font-weight: normal;
+                    }
+                    > strong:last-of-type {
+                      @include inline-block;
+                      @include full-width;
+                      margin: 5px 0 0 0;
+                      font-size: 26px !important;
+                      color: $dark_blue !important;
+                    }
+                  }
+                  > div.mw_col2 {
+                    @include box-flex(0);
+                    width: 175px;
+                    > input {
+                      @include button-blue;
+                    }
+                  }
+                }
+                > div.mw_row2 {
+                  @include box(horizontal, center, center);
+                  height: 30px;
+                  margin: 0 0 -1px 0;
+                  background: #ddd;
+                  border: 1px solid #ccc;
+                  border-width: 1px 0;
+                  > em {
+                    text-style: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        > div.mw_free_shipping_description {
+          > div.free_shipping {
+            margin: 15px 0 0 0;
+            > div:nth-child(1) {
+              display: none;
+            }
+            > div:nth-child(2) {
+              padding: 0 15px;
+              > div {
+                padding: 10px;
+                border: 1px solid #ddd;
+              }
+            }
+          }
+          > div.row_d {
+            margin: 10px 0 0 0;
+            padding: 0 15px;
+            > h2 {
+              font-size: 13px;
+              font-weight: normal;
+              > a {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        > div.mw_links {
+          display: none;
+          margin: 15px 0 0 0;
+          > ul {
+            > li {
+              > a {
+                @include button;
+                height: 35px;
+                background: image-url("menu/arrow_right_blue_s.png") no-repeat center right content-box;
+                border-bottom: 1px solid $border_light_gray;
+                font-size: 13px;
+                font-weight: normal;
+                color: $dark_blue;
+              }
+            }
+            > li:first-child {
+              border-top: 1px solid $border_light_gray;
+            }
+          }
+        }
+        > div.mw_tabs {
+          margin: 15px 0 0 0;
+          > div {
+            > div.tabs {
+              > ul {
+                @include full-width;
+                @include box(horizontal, justify, start);
+                padding: 0 10px;
+                > li {
+                  @include box-flex(1);
+                  margin: 0 5px;
+                  > div {
+                    @include full-width;
+                    @include box(horizontal, center, center);
+                    height: 40px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px 5px 0 0;
+                    position: relative;
+                    z-index: 5;
+                    > span {
+                      @include inline-block;
+                      @include full-width;
+                      text-align: center;
+                    }
+                  }
+                }
+                > li[data-ur-state="enabled"] {
+                  > div {
+                    border-bottom: 1px solid #fff;
+                  }
+                }
+              }
+            }
+            > div.tab_body {
+              margin-top: -1px;
+              border-top: 1px solid #ddd;
+              > div {
+                > div {
+                  > div {
+                    > div#product {
+                      > div.top_sec {
+                        > div.top_sec {
+                          display: none;
+                        }
+                        > div.tabsect {
+                          display: block;
+                          margin: 10px 0 0 0;
+                          padding: 0 15px;
+                          > strong {
+                            @include inline-block;
+                            font-size: 13px;
+                            font-weight: bold;
+                            margin: 0 0 5px 0;
+                          }
+                          p {
+                            @include inline-block;
+                            margin: 0 0 5px 0;
+                          }
+                          b {
+                            @include inline-block;
+                            @include full-width;
+                            margin: 0 0 5px 0;
+                          }
+                          br {
+                            display: none;
+                          }
+                          ul, blockquote {
+                            @include inline-block;
+                            margin: 0 0 5px 0;
+                            padding: 0;
+                            > li {
+                              padding: 0 0 0 15px;
+                              background: image-url("arrows/arrow1.gif") no-repeat center left;
+                            }
+                          }
+                        }
+                      }
+                      > div.bottom_sec {
+                        display: none;
+                      }
+                    }
+                    > div#payment {
+                      > div.top_sec {
+                        margin: 10px 0 0 0;
+                        padding: 0 15px;
+                        strong {
+                          @include full-width;
+                          margin: 0 0 5px 0;
+                          border: 1px sol
+                        }
+                        p {
+                          @include full-width;
+                          margin: 0 0 5px 0;
+                          > span.img_hold {
+                            @include inline-block;
+                            width: 290px;
+                            height: 27px;
+                            margin: 5px 0 0 0;
+                            background: image-url("icons/payments_accepted.png") no-repeat;
+                            > img {
+                              display: none;
+                            }
+                          }
+                        }
+                        p:first-of-type {
+                          @include inline-block;
+                          margin: 3px 0 8px 0;
+                        }
+                      }
+                    }
+                    > div#instruction {
+                      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // Esconder momentaneamente
+        > div.mw_also_recommended {
+          display: none;
+          margin: 15px 0 0 0;
+          > div {
+            > div.h3 {
+              @include bg-block-head;
+              > span {
+                @include title-block-head;
+                font-weight: bold;
+              }
+            }
+            > div.content {
+              > div {
+                > div {
+                  > ul {
+                    @include box(horizontal, start, start);
+                    width: 320px;
+                    height: 170px;
+                    padding: 0 5px 0 15px;
+                    overflow-y: hidden;
+                    > li {
+                      @include box-flex(0);
+                      width: 120px;
+                      height: 160px;
+                      border: 1px solid #ddd;
+                      border-radius: 5px;
+                      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+                      margin: 0 10px 0 0;
+                      > div.thumb_nail {
+                        > a {
+                          @include box(horizontal, center, center);
+                          width: 118px;
+                          height: 80px;
+                          border-bottom: 1px solid #ddd;
+                          > img {
+                            @include box-flex(0);
+                            width: 85%;
+                            height: auto;
+                            margin: 0 0 0 5px;
+                            padding: 0;
+                          }
+                        }
+                      }
+                      > div[class^="iop"] {
+                        display: none;
+                      }
+                      > div.mw_row2 {
+                        width: 120px;
+                        > span {
+                          @include full-width;
+                          max-height: 40px;
+                          margin: 7px 0 5px 0;
+                          padding: 0 10px;
+                          font-size: 12px;
+                          line-height: 1.1em;
+                          text-align: center;
+                          overflow: hidden;
+                        }
+                        > div.poll {
+                          @include box(horizontal, center, start);
+                          padding: 0 !important;
+                          > div {
+                            > ul {
+                              > li {
+                                > a {
+
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      > div.row {
+                        > strong {
+                          
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

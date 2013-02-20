@@ -1,0 +1,219 @@
+
+// General Colors
+$light_blue: #cfe6f4;
+$light_yellow: #fefbf5;
+$light_gray: #ececec;
+$medium_blue: #478ab6;
+$dark_blue: #346585;
+$darkest_blue: #295683;
+
+// Border colors
+$border_light_blue: darken($light_blue, 5%);
+$border_light_yellow: darken($light_yellow, 5%);
+$border_light_gray: darken($light_gray, 5%);
+$border_medium_blue: darken($medium_blue, 10%);
+$border_dark_blue: darken($dark_blue, 8%);
+
+
+// Titles
+
+@mixin titles {
+	@include box-sizing(border-box);
+	width: 100%;
+	font-weight: bold;
+	color: $dark_blue;
+}
+
+@mixin title-h1 {
+	@include titles;
+	font-size: 16px;
+	color: $dark_blue;
+}
+
+@mixin title-h2 {
+	@include titles;
+	font-size: 14px;
+}
+
+// Head Titles
+
+@mixin bg-block-head {
+	@include box(horizontal, start, start);
+  height: 60px;
+  padding: 14px 0 0 14px;
+  background: image-url("bg_titles.jpg") no-repeat right top;
+}
+
+@mixin title-block-head {
+	@include full-width;
+  font-size: 15px;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+// Flat Backgrounds
+
+@mixin bg-light-blue {
+	background: $light_blue;
+	border: 1px solid $border_light_blue;
+	border-width: 1px 0;
+}
+
+@mixin bg-light-yellow {
+	background: $light_yellow;
+	border: 1px solid $border_light_yellow;
+	border-width: 1px 0;
+}
+
+@mixin bg-light-gray {
+	background: $light_gray;
+	border: 1px solid $border_light_gray;
+	border-width: 1px 0;
+}
+
+@mixin bg-medium-blue {
+	background: $medium_blue;
+	border: 1px solid $border_medium_blue;
+	border-width: 1px 0;
+}
+
+@mixin bg-dark-blue {
+	background: $dark_blue;
+	border: 1px solid $border_dark_blue;
+	border-width: 1px 0;
+}
+
+
+// General Mixins
+
+@mixin full-width {
+	@include box-sizing(border-box);
+	width: 100%;
+}
+
+
+// Menu Buttons
+
+@mixin button {
+	@include box(horizontal, start, center);
+	@include box-sizing(border-box);
+	width: 100%;
+	height: 40px;
+	padding: 0 15px;
+	font-weight: bold;
+}
+
+@mixin menu-title {
+	@include button;
+	@include bg-medium-blue;
+	height: 30px;
+	box-shadow: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin menu-collapse {
+	@include button;
+	@include bg-dark-blue;
+	padding-left: 40px;
+	background: image-url("menu/collapse.png") no-repeat 13px 9px $dark_blue;
+	border-width: 0 0 1px 0;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin menu-contract {
+	@include menu-collapse;
+	background: image-url("menu/contract.png") no-repeat 13px 9px $dark_blue;
+}
+
+@mixin menu-collapse-2 {
+	@include menu-collapse;
+	@include bg-medium-blue;
+	background: image-url("menu/collapse_2.png") no-repeat 13px 9px $medium_blue;
+	border-width: 0 0 1px 0;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset;
+}
+
+@mixin menu-contract-2 {
+	@include menu-collapse-2;
+	background: image-url("menu/contract_2.png") no-repeat 13px 9px $medium_blue;
+}
+
+@mixin menu-collapse-3 {
+	@include menu-collapse;
+	@include bg-medium-blue;
+	background: image-url("menu/collapse_3.png") no-repeat 13px 9px #6ba1c5;
+	border-bottom: 1px solid darken($medium_blue, 5%);
+	border-width: 0 0 1px 0;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset;
+}
+
+@mixin menu-contract-3 {
+	@include menu-collapse-3;
+	background: image-url("menu/contract_3.png") no-repeat 13px 9px #6ba1c5;
+}
+
+@mixin menu-link {
+	@include button;
+	@include bg-light-blue;
+	background: image-url("menu/arrow_right_blue_s.png") no-repeat center right content-box;
+	border: 1px solid darken($light_blue, 10%);
+	border-width: 0 0 1px 0;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	font-size: 13px;
+	font-weight: normal;
+	color: $dark_blue;
+}
+
+@mixin menu-link-2 {
+	@include menu-link;
+	@include bg-light-yellow;
+	border: 1px solid #ddd;
+	border-width: 0 0 1px 0;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 1) inset;
+	color: #444;
+}
+
+@mixin button-blue {
+	@include button;
+	@include bg-dark-blue;
+	padding: 0 15px;
+	background: image-url("arrows/right_white_m.png") no-repeat center right $dark_blue;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+	border-radius: 5px;
+	border-width: 1px 1px 1px 1px;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

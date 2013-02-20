@@ -1,0 +1,177 @@
+// Shopping Sidebar
+div#mw_shopping_cart {
+	background: $light_blue;
+	> div.mw_content {
+		width: 256px;
+		> div.inner {
+			> div.mw_top {
+				@include box(horizontal, justify, end);
+				height: 55px;
+				padding: 0 15px 15px 15px;
+				> div:first-child {
+					@include box-flex(1);
+					> span {
+						@include inline-block;
+						@include full-width;
+						font-weight: normal;
+					}
+					> span:first-child {
+						font-size: 11px;
+						line-height: 1em;
+						text-transform: uppercase;
+					}
+					> span:last-child {
+						font-size: 16px;
+					}
+				}
+				> div.shopping_cart {
+					@include box-flex(0);
+					width: 80px;
+					text-align: right;
+					> strong {
+						> small {
+							font-size: 16px;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+			> div.mini_cart_sec {
+				div.top_bg, div.btm_bg {
+					display: none;
+				}
+				> div.mid_bg {
+					> div.common_row:first-of-type {
+						@include box(horizontal, start, center);
+						@include bg-medium-blue;
+						height: 30px;
+						padding: 0 15px;
+						> span {
+							text-transform: uppercase;
+							font-size: 11px;
+							font-weight: bold;
+							color: #fff;
+						}
+					}
+					> ul {
+						> li {
+							@include bg-dark-blue;
+							margin: -1px 0;
+							padding: 10px 15px;
+							position: relative;
+							z-index: 5;
+							> div.col01 {
+								@include box(horizontal, justify, start);
+								margin: 0 0 5px 0;
+								> div:first-child {
+									@include box-flex(0);
+									width: 70px;
+									margin: 0 10px 0 0;
+									> a {
+										@include inline-block;
+										width: 70px;
+										height: 60px;
+										background: #fff;
+										border-radius: 3px;
+										> img {
+											@include inline-block;
+											width: 50px;
+											height: auto;
+											margin: 3px 0 0 10px;
+										}
+									}
+								}
+								> div:last-child {
+									@include box-flex(1);
+									> span {
+										color: #fff;
+										> strong {
+											@include inline-block;
+											@include full-width;
+											margin: -2px 0 3px 0;
+										}
+									}
+								}
+							}
+							> div.mw_bottom {
+								@include box(horizontal, justify, start);
+								> div {
+									@include box-flex(0);
+									> span {
+										//font-size: 12px;
+										color: #fff;
+									}
+								}
+								> div:nth-child(1) {
+									width: 35px;
+								}
+								> div:nth-child(2) {
+									width: 80px;
+								}
+								> div:nth-child(3) {
+									width: 80px;
+								}
+							}
+						}
+					}
+					> div.common_row:last-of-type {
+						> div.col05 {
+							@include bg-medium-blue;
+							@include box(horizontal, center, center);
+							height: 30px;
+							> strong {
+								color: #fff;
+								> em {
+									font-style: normal;
+									font-weight: normal;
+								}
+							}
+						}
+						> div.col06 {
+							@include box(horizontal, justify, center);
+							padding: 10px 15px;
+							> div:first-child {
+								@include box-flex(1);
+								> strong {
+									font-weight: normal;
+									> span.red {
+										@include inline-block;
+										@include full-width;
+										font-size: 20px;
+										font-weight: bold;
+									}
+								}
+							}
+							> div:last-child {
+								@include box-flex(0);
+								width: 125px;
+								> span.mw_button {
+									@include full-width;
+									> a {
+										@include button-blue;
+										height: 35px;
+									}	
+								}
+								
+							}	
+						}
+					}
+				}
+			}
+			> span.h2 {
+				@include full-width;
+				margin: 10px 0 0 0;
+				padding: 0 15px;
+				> span {
+					@include box-sizing(border-box);
+					@include inline-block;
+					width: 226px;
+					padding: 10px;
+					border: 1px solid $border_medium_blue;
+					font-size: 11px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

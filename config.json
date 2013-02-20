@@ -1,0 +1,9 @@
+{
+	"host_map": [
+		"$.petcarerx.com => www.petcarerx.com",
+		"$.petcarerx.com => petcarerx.com",
+		"$.cdn.petcarerx.com => cdn.petcarerx.com",
+		"$.blog.petcarerx.com => blog.petcarerx.com",
+    "$.petcarerx.ugc.bazaarvoice.com => petcarerx.ugc.bazaarvoice.com"
+	]
+}

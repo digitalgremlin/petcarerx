@@ -1,0 +1,26 @@
+// Reset file for standardizing the page
+// @import "globals/_reset";
+
+// Base file contains all the global styles
+@import "globals/_base";
+
+// File for global Uranium stylings
+@import "globals/_uranium.scss";
+
+// Site wide variables
+@import "globals/_variables.scss";
+
+// Header & Footer
+@import "sections/_main_footer";
+@import "sections/_main_header";
+@import "sections/_main_content";
+@import "sections/_menu";
+@import "sections/_shopping_cart";
+
+// Pages
+@import "pages/_aquarium_under_30";
+@import "pages/_aquatic_center";
+@import "pages/_cart";
+@import "pages/_home";
+@import "pages/_our_history";
+@import "pages/_product";

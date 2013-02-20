@@ -1,0 +1,163 @@
+// Menu sidebar
+div#mw_menu {
+  background: $light_blue;
+  > div.mw_content {
+    width: 256px;
+    > div.mw_search {
+      @include box(vertical, center, start);
+      height: 55px;
+      padding: 0 12px;
+      background: $light_blue;
+      > div {
+        > div {
+          > input {
+            height: 35px;
+            padding-left: 30px;
+            background: image-url("form/search.png") no-repeat 10px 9px #fff;
+            border: 1px solid $border_light_blue;
+            border-radius: 18px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) inset, 0 1px 0 rgba(255, 255, 255, 0.3);
+          }
+        }
+        > input {
+          display: none;
+        }
+      }
+    }
+    > div#menu {
+      > h3 {
+        @include menu-title;
+      }
+      > ul {
+        > li {
+          > strong {
+            > span {
+              @include menu-collapse;
+            }
+            > a {
+              @include menu-collapse;
+            }
+          }
+          > strong[data-ur-state="enabled"] {
+            > span {
+              @include menu-contract;
+            }
+          }
+          > div {
+            > div {
+              > div {
+                > div {
+                  > span {
+                    @include menu-collapse-2;
+                  }
+                  > span[data-ur-state="enabled"] {
+                    @include menu-contract-2;
+                  }
+                  > ul {
+                    > li {
+                      > a {
+                        @include menu-link;
+                      }
+                    }
+                    > div {
+                      li.subhead {
+                        > span {
+                          @include menu-collapse-3;
+                        }
+                        > span[data-ur-state="enabled"] {
+                          @include menu-contract-3;
+                        }
+                        > ul {
+                          > li {
+                            > a {
+                              @include menu-link;
+                            }
+                          }
+                          > li:last-of-type {
+                            > a {
+                              border-bottom: 1px solid darken($medium_blue, 5%);
+                            }
+                          }
+                        }
+                      }
+                      li.subhead:last-of-type {
+                        > span {
+                          border-bottom: 1px solid $border_medium_blue;
+                        }
+                      }
+                    }
+                  }
+                }
+                > div:first-of-type {
+                  > ul {
+                    > li:last-of-type {
+                      > a {
+                        border-bottom: 1px solid $border_medium_blue;
+                      }
+                    }
+                  }
+                }
+                > div:last-of-type {
+                  > span {
+                    border-bottom: 1px solid $border_dark_blue;
+                  }
+                  > ul {
+                    > li:last-of-type {
+                      > a {
+                        border-bottom: 1px solid $border_dark_blue;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        > li:first-child {
+          > strong {
+            > span {
+              margin-top: -1px;
+              border-top: 1px solid $border_dark_blue;    
+            }
+          }
+        }
+      }
+    }
+    > div.mw_other_links {
+      > h3 {
+        @include menu-title;
+        border-width: 0 0 1px 0;
+      }
+      > ul {
+        > li {
+          > span.mw_icon {
+            display: none;
+          }
+          > a {
+            @include menu-link;
+            padding-left: 40px;
+            font-weight: bold;
+          }
+        }
+        > li:nth-child(1) > a {
+          @include background(image-url("menu/login.png") no-repeat 15px 11px, image-url("menu/arrow_right_blue.png") no-repeat center right content-box);
+        }
+        > li:nth-child(2) > a {
+          @include background(image-url("menu/new_account.png") no-repeat 15px 11px, image-url("menu/arrow_right_blue.png") no-repeat center right content-box);
+        }
+        > li:nth-child(3) > a {
+          @include background(image-url("menu/order_status.png") no-repeat 15px 11px, image-url("menu/arrow_right_blue.png") no-repeat center right content-box);
+        }
+        > li:nth-child(4) > a {
+          @include background(image-url("menu/live_chat.png") no-repeat 15px 11px, image-url("menu/arrow_right_blue.png") no-repeat center right content-box);
+        }
+        > li:nth-child(5) > a {
+          @include background(image-url("menu/help.png") no-repeat 15px 11px, image-url("menu/arrow_right_blue.png") no-repeat center right content-box);
+        }
+        > li:nth-child(6) > a {
+          @include background(image-url("menu/call_us.png") no-repeat 15px 11px, image-url("menu/arrow_right_blue.png") no-repeat center right content-box);
+        }
+      }
+    }
+  }
+}

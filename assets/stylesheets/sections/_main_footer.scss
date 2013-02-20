@@ -1,0 +1,184 @@
+div#mw_main_content {
+  > div {
+    > div.mw_main_footer {
+      margin-top: 40px;
+      > div {
+        > div.mw_top {
+          @include box(horizontal, center, start);
+          height: 30px;
+          border-top: 1px solid #e5e5e5;
+          > span {
+            @include box-flex(0);
+            @include inline-block;
+            width: 67px;
+            height: 35px;
+            margin-top: -20px;
+            background: image-url("logo_petcarerx_footer.png") no-repeat;
+          }
+        }
+        > div.mw_middle {
+          > div {
+            > div#mw_button_footer {
+              @include box(horizontal, center, center);
+              @include bg-light-gray;
+              height: 55px;
+
+              > span {
+                @include inline-block;
+                @include box-flex(0);
+                @include box(horizontal, center, center);
+                width: 140px;
+                height: 35px;
+                background: #fff;
+                border: 1px solid $border_light_gray;
+                border-radius: 18px;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+                font-size: 11px;
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+            }
+            > div.mw_email {
+              margin-top: -1px;
+              > div {
+                @include box(vertical, center, center);
+                @include bg-medium-blue;
+                height: 135px;
+                > h4 {
+                  @include box-flex(0);
+                  width: auto;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  color: #fff;
+                  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+                }
+                > div.input_bg {
+                  @include box-flex(0);
+                  width: 220px;
+                  margin: 5px 0 7px 0;
+                  > input {
+                    height: 35px;
+                    background: #3d779e;
+                    border: 1px solid #346585;
+                    border-radius: 35px;
+                    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+                    font-size: 12px;
+                    color: #fff;
+                  }
+                }
+                > span.mw_button {
+                  @include box-flex(0);
+                  > input {
+                    @include inline-block;
+                    width: 100px;
+                    height: 35px;
+                    background: #fff !important;
+                    border: 1px solid #346585;
+                    border-radius: 35px;
+                    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+                    font-size: 11px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $darkest_blue;
+
+                  }
+                }
+              }
+            }
+            > div.mw_links {
+              margin-top: -1px;
+              > div {
+                > ul {
+                  > li {
+                    > span {
+                      @include menu-collapse;
+                    }
+                    > span[data-ur-state="enabled"] {
+                      @include menu-contract;
+                    }
+                    > ul {
+                      > li {
+                        background: $light_blue;
+                        > a {
+                          @include menu-link;
+                        }
+                      }
+                      > li:last-of-type {
+                        > a {
+                          border-bottom: 1px solid $border_dark_blue;
+                        }
+                      }
+                    }
+                  }
+                  > li:first-of-type {
+                    > span {
+                      border-width: 1px 0;
+                    }
+                  }
+                  > li:last-of-type {
+                    > ul {
+                      > li:last-of-type {
+                        > a {
+                          border-bottom: 1px solid $border_light_blue;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          > div.mw_contracted {
+            > div.mw_email {
+              display: none;
+            }
+            > div.mw_links {
+              display: none;
+            }
+          }
+        }
+        > div.mw_bottom {
+          > div.mw_credit_cards {
+            @include box(horizontal, center, center);
+            height: 55px;
+            background: #fff;
+            > ul {
+              @include box-flex(0);
+              @include box(horizontal, center, center);
+              > li {
+                @include box-flex(0);
+                width: 36px;
+                margin: 0 4px;
+                > img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+          > div.mw_powered_by {
+            @include box(horizontal, center, center);
+            height: 30px;
+            border-top: 1px solid #e5e5e5;
+            > p {
+              @include box-flex(0);
+              width: auto;
+              > a {
+                @include inline-block;
+                width: 64px;
+                height: 8px;
+                margin: 2px 0 0 0;
+                background: image-url("logo_moovweb.png") no-repeat;
+                text-indent: -10000px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+span.hidden {
+  display: none;
+} 

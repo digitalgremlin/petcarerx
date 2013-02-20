@@ -1,0 +1,271 @@
+body#mw_cart_page {
+  div#body_container {
+    > div#checkout_page {
+      > div {
+        > div {
+          > div.continue_shopping {
+            @include box(horizontal, start, center);
+            @include bg-light-blue;
+            height: 30px;
+            padding: 0 15px;
+            overflow-y: hidden;
+            > a {
+              font-weight: bold;
+              color: #333;
+            }
+          }
+          > div.thank_sec {
+            > div.left {
+              margin: 10px 0 0 0;
+              padding: 0 15px;
+              > h3 {
+                font-weight: bold;
+              }
+              > strong {
+                font-weight: normal;
+                > span {
+
+                }
+              }
+              > div.tooltip {
+                display: none;
+              }
+            }
+            > div.right {
+              > div {
+                margin: 10px 0 0 0;
+                padding: 0 15px;
+                > a {
+                  @include button-blue;
+                  display: none;
+                }
+              }
+            }
+          }
+          > div.item_price_section {
+            > div {
+              > div:nth-child(1) {
+                margin: 10px 0 5px 0;
+                padding: 0 15px;
+                > h2 {
+                  @include title-h2;
+                }
+              }
+              > div:nth-child(2) {
+                > div {
+                  > div {
+                    > div {
+                      @include bg-light-gray;
+                      padding: 10px 15px;
+                      > div.mw_row1 {
+                        @include box(horizontal, justify, start);
+                        > div:nth-child(1) {
+                          @include box-flex(0);
+                          width: 70px;
+                          height: 50px;
+                          margin: 0 10px 5px 0;
+                          background: #fff;
+                          border: 1px solid #ddd;
+                          border-radius: 5px;
+                          > a {
+                            > img {
+                              @include inline-block;
+                              width: 40px;
+                              height: auto;
+                              margin: 3px 0 0 15px;
+                            }
+                          }
+                        }
+                        > div:nth-child(2) {
+                          > strong {
+                            @include full-width;
+                          }
+                          > span {
+                            @include inline-block;
+                            @include full-width;
+                          }
+                          > span.item_as_span {
+                            display: none;
+                          }
+                        }
+                      }
+                      > div.mw_row2 {
+                        @include box(horizontal, justify, start);
+                        > div:nth-child(1) {
+                          display: none;
+                        }
+                        > div:nth-child(2) {
+                          @include box-flex(1);
+                        }
+                        > div:nth-child(3) {
+                          @include box-flex(1);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          > div#BodyContainer_discountpromobox {
+            > div.head_box {
+              margin: 10px 0 0 0;
+              padding: 0 15px;
+              > h3 {
+                @include title-h2;
+              }
+            }
+            > div.order_btm {
+              > div {
+                > div {
+                  > ul {
+                    margin: 10px 0 0 0;
+                    > li {
+                      > h6 {
+                        @include menu-collapse;
+                        margin: 0;
+                      }
+                      > h6[data-ur-state="enabled"] {
+                        @include menu-contract;
+                      }
+                    }
+                    > li:first-child {
+                      > h6 {
+                        border-top: 1px solid $border_dark_blue;
+                      }
+                    }
+                    > li:nth-child(1) {
+                      > div {
+
+                      }
+                    }
+                    > li:nth-child(2) {
+                      > div {
+                        
+                      }
+                    }
+                    > li:nth-child(3) {
+                      > div {
+                        
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          > div.order_box.pad_top {
+            > div.head_box {
+              margin: 10px 0 0 0;
+              padding: 0 15px;
+              > h3 {
+                @include title-h2;
+              }
+            }
+            > div.order_top.order_sumry {
+              > div.left_sec {
+                margin: 5px 0 0 0;
+                padding: 0 15px;
+              }
+              > div.right_sec {
+                margin: 15px 0 0 0;
+                padding: 0 15px;
+                > div:nth-child(1) {
+
+                  > ul {
+                    > li:nth-child(1) {
+                      > strong {
+                        font-weight: normal;
+                      }
+                      > span {
+                        @include inline-block;
+                        @include full-width;
+                        margin: 0 0 10px 0;
+                        font-size: 16px;
+                        font-weight: bold;
+                      }
+                    }
+                    > li:nth-child(2) {
+                      > strong {
+                        @include full-width;
+                        font-weight: normal;
+                      }
+                      > div.select_box {
+                        @include full-width;
+                        margin: 0 0 10px 0;
+                        > select {
+                          display: none;
+                        }
+                        > div {
+                          > div.selectedTxt {
+                            font-size: 16px;
+                            font-weight: bold;
+                          }
+                        }
+                      }
+                      > div#ship_charge_zip {
+                        // Escondido
+                        display: none;
+                        @include full-width;
+                        border: 1px solid red;
+                      }
+                    }
+                    > li:nth-child(3) {
+                      margin: 10px 0 0 0;
+                      > p {
+                        @include full-width;
+                      }
+                      > span {
+                        @include inline-block;
+                        @include full-width;
+                        margin: 0 0 10px 0;
+                        font-size: 16px;
+                        font-weight: bold;
+                      }
+                    }
+                    > li:nth-child(4) {
+                      > strong {
+                        font-weight: normal;
+                      }
+                      > span {
+                        @include inline-block;
+                        margin: 0 0 10px 0;
+                        font-size: 16px;
+                        font-weight: bold;
+                      }
+                    }
+                    > li:nth-child(5) {                      
+                      > strong {
+                        font-weight: normal;
+                      }
+                      > span {
+                        @include inline-block;
+                        margin: 7px 0 20px 0;
+                        font-size: 32px;
+                        font-weight: bold;
+                        color: $dark_blue;
+                      }
+                    }
+                  }
+                }
+                > div:nth-child(2) {
+                  > div.checkout {
+                    > a {
+                      @include button-blue;
+                      margin: 0 0 10px 0;
+                    }
+                  }
+                  > div.mw_paypal {
+                    > a {
+                      @include button-blue;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

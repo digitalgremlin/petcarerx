@@ -1,0 +1,98 @@
+body#mw_our_history_page {
+  div#body_container {
+    > div {
+      > div.outer_banner {
+        > div.bredcrumb {
+          @include box(horizontal, start, center);
+          @include bg-light-blue;
+          height: 30px;
+          padding: 0 15px;
+          > ul {
+            @include full-width;
+            > li {
+              display: inline;
+              font-size: 12px;
+              > a {
+                color: #333;
+              }
+              > strong {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        > div.history_banner {
+          > img {
+
+          }
+          > div {
+            margin: 10px 0 0 0;
+            padding: 0 15px;
+            > p {
+
+            }
+          }
+        }
+      }
+      > div#about_us {
+        margin: 10px 0 0 0;
+        > div:nth-child(1) {
+          > div.heading {
+            @include bg-block-head;
+            > h3 {
+              @include title-block-head;
+            }
+          }
+          > div.inner_section {
+            margin: -3px 0 0 0;
+            padding: 0 15px;
+            > p {
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+        > div:nth-child(2) {
+          margin: 10px 0 0 0;
+          padding: 0 15px;
+          > div:nth-child(1) {
+            > p {
+              margin: 0 0 10px 0;
+            }
+            > object {
+              float: left;
+              width: 290px !important;
+              height: 175px !important;
+              margin: 10px 0 0 0;
+              padding: 0;
+            }
+          }
+          > div:nth-child(2) {
+            @include inline-block;
+            margin: 10px 0 0 0;
+            > h3 {
+              @include title-h1;
+              margin: 0 0 10px 0;
+            }
+          }
+          > div:nth-child(3) {
+            > h3 {
+              @include full-width;
+              margin: 0 0 7px 0;
+              font-weight: bold;
+            }
+            > p {
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+        > div.mw_more {
+          margin: 10px 0 0 0;
+          padding: 0 15px;
+          > span {
+            color: $dark_blue;
+          }
+        }
+      }
+    }
+  }
+}

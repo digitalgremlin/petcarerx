@@ -1,0 +1,379 @@
+body#mw_aquarium_under_30_page {
+  div#body_container {
+    > div {
+      > div.bredcrumb {
+        @include box(horizontal, start, center);
+        @include bg-light-blue;
+        height: 30px;
+        padding: 0 15px;
+        overflow-y: hidden;
+        > ul {
+          width: 430px;
+          > li {
+            display: inline;
+            font-size: 12px;
+            > a {
+              color: #333;
+            }
+          }
+        }
+      }
+      > h1 {
+        @include title-h1;
+        padding: 10px 15px;
+      }
+      > div.mw_tabs {
+        > div.mw_togglers {
+          @include box(horizontal, justify, start);
+          padding: 0 10px;
+          > div {
+            @include box-flex(1);
+            margin: 0 5px;
+            > span {
+              @include full-width;
+              @include box(horizontal, center, center);
+              height: 40px;
+              border: 1px solid #ddd;
+              border-radius: 5px 5px 0 0;
+              position: relative;
+              z-index: 5;
+            }
+          }
+          > div[data-ur-state="enabled"] {
+            > span {
+              border-bottom: 1px solid #fff;
+            }
+          }
+          > div.mw_products {
+            > span {
+              
+            }
+          }
+          > div.mw_information {
+            > span {
+
+            }
+          }
+          > div#mw_button_filters {
+            @include box-flex(0);
+            width: 40px;
+            > span {
+              width: 40px;
+              height: 40px;
+              background: image-url("icons/filter.png") no-repeat center top;
+              text-indent: -10000px;
+
+            }
+          }
+          > div#mw_button_filters[data-ur-state="enabled"] {
+            > span {
+              @include bg-medium-blue;
+              background: image-url("icons/filter.png") no-repeat center bottom $medium_blue;
+              border-width: 1px 1px 1px 1px;
+              border-bottom: 1px solid $medium_blue;
+              z-index: 15;
+            }
+          }
+        }
+        > div.mw_contents {
+          margin: -1px 0 0 0;
+          border-top: 1px solid #ddd;
+          > div#mw_content_filters {
+            margin: -1px 0 0 0;
+            position: relative;
+            z-index: 10;
+            > div.mw_sort_by {
+              @include bg-medium-blue;
+              padding: 10px 15px 15px 15px;
+              > span {
+                @include title-h2;
+                color: #fff;
+              }
+              > div.select_box {
+                > select {
+                  @include full-width;
+                  height: 35px;
+                  margin: 5px 0 0 0;
+                  border: 1px solid $border_medium_blue;
+                }
+              }
+            }
+            > div.mw_narrow_your_results {
+              > div {
+                > span {
+                  display: none;
+                }
+                > ul.mw_filters {
+                  margin-top: -1px;
+                  border-top: 1px solid $border_dark_blue;
+                  > li {
+                    > div.sub_heading {
+                      @include menu-collapse;
+                    }
+                    > div.sub_heading[data-ur-state="enabled"] {
+                      @include menu-contract;
+                    }
+                    > ul {
+                      > li {
+                        background: $light_blue;
+                        > a {
+                          @include menu-link;
+                        }
+                      }
+                      > li:last-of-type {
+                        > a {
+                          border-bottom: 1px solid $border_dark_blue;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          > div[data-ur-state="disabled"] {
+            display: none;
+          }
+          > div.mw_products {
+            > div {
+              > div.pagination_box {
+                padding: 10px 15px;
+                > div.page_top {
+                  display: none;
+                }
+              }
+              > div.pagination_box.page_bottom {
+                > span.pad_none {
+                  display: none;
+                }
+                > div.page_top {
+                  display: block;
+                }
+              }
+              > div.common_box_outer {
+                > div {
+                  > ul {
+                    @include full-width;
+                    padding: 5px 0 0 10px;
+                    > li {
+                      float: left;
+                      width: 140px;
+                      margin: 0 5px 10px 5px;
+                      > div.thumb_nail {
+                        width: 140px;
+                        height: 100px;
+                        border-radius: 5px 5px 0 0;
+                        border: 1px solid #ddd;
+                        > a:nth-child(1) {
+                          display: none;
+                        }
+                        > a:nth-child(2) {
+                          width: 140px;
+                          height: 100px;
+                          > img {
+                            @include inline-block;
+                            width: 60%;
+                            height: auto;
+                            margin: 5px 0 0 25px;
+                          }
+                        }
+                      }
+                      > div:nth-child(2) {
+                        @include box(vertical, start, center);
+                        height: 80px;
+                        margin: -1px 0;
+                        padding: 0 10px;
+                        border: 1px solid #ddd;
+                        > h4 {
+                          margin: 5px 0;
+                          text-align: center;
+                          font-size: 12px;
+                          color: $dark_blue;
+                        }
+                        > div.poll {
+                          @include box(horizontal, center, start);
+                          padding: 0 !important;
+                          > div.grey {
+                            @include box-flex(0);
+                            width: 75px;
+                            height: 14px;
+                            background: image-url("icons/poll_bg.gif") repeat-x;
+                            > div.orange {
+                              width: 75px;
+                              height: 14px;
+                              background: image-url("icons/poll_bg_h.gif") repeat-x;
+                            }
+                          }
+                        }
+                      }
+                      > div:nth-child(3) {
+                        @include box(horizontal, center, center);
+                        height: 35px;
+                        border-radius: 0 0 5px 5px;
+                        border: 1px solid #ddd;
+                        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+                        > strong {
+
+                        }
+                      }
+                    }
+                  }
+                  @media screen and (orientation:landscape) {
+                    > ul {
+                      > li {
+                        width: 143px;
+                        > div.thumb_nail {
+                          width: 143px;
+                          > a:nth-child(2) {
+                            width: 143px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              > div.pagination_box.page_bottom {
+                float: left;
+                margin: -5px 0 30px 0;
+                > span:first-of-type {
+                  display: none;
+                }
+                > ul.pagination {
+                  @include box(horizontal, center, start);
+                  > li {
+                    @include box-flex(0);
+                    @include box(horizontal, center, center);
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 3px;
+                    > a {
+                      @include inline-block;
+                      @include box(horizontal, center, center);
+                      width: 40px;
+                      height: 40px;
+                      border: 1px solid #ddd;
+                      border-radius: 20px;
+                      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
+                      font-weight: bold;
+                    }
+                    > a.active {
+                      border: 1px solid #aaa;
+                    }
+                  }
+                  > li:first-child {
+                    > a {
+                      background: image-url("arrows/left_blue_m.png") no-repeat center center;
+                    }
+                  }
+                  > li:last-child {
+                    > a {
+                      background: image-url("arrows/right_blue_m.png") no-repeat center center;  
+                    }
+                  }
+                }
+              }
+            }
+          }
+          > div.mw_information {
+            > div {
+              > div.pagination_box {
+                display: none;
+                span.pad_none {
+                  border: 1px solid red;
+                }
+                div.page_top {
+                  display: none;
+                }
+              }
+              > div.pagination_box.page_bottom {
+                display: block;
+                > span {
+                  display: none;
+                }
+                ul.pagination {
+                  @include box(horizontal, center, start);
+                  > li {
+                    @include box-flex(0);
+                    @include box(horizontal, center, center);
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 3px;
+                    > a {
+                      @include inline-block;
+                      @include box(horizontal, center, center);
+                      width: 40px;
+                      height: 40px;
+                      border: 1px solid #ddd;
+                      border-radius: 20px;
+                      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
+                      font-weight: bold;
+                    }
+                    > a.active {
+                      border: 1px solid #aaa;
+                    }
+                  }
+                  > li:first-child {
+                    > a {
+                      background: image-url("arrows/left_blue_m.png") no-repeat center center;
+                    }
+                  }
+                  > li:last-child {
+                    > a {
+                      background: image-url("arrows/right_blue_m.png") no-repeat center center;  
+                    }
+                  }
+                }
+              }
+              > div.article_list_outer {
+                margin: 0 0 15px 0;
+                > ul {
+                  > li {
+                    @include box(horizontal, justify, start);
+                    padding: 12px 15px;
+                    border-bottom: 1px solid #ddd;
+                    > div.thumb {
+                      @include box-flex(0);
+                      width: 80px;
+                      height: 80px;
+                      margin-right: 10px;
+                      > a {
+                        width: 80px;
+                        height: 80px;
+                        > img {
+                          @include inline-block;
+                          width: 100%;
+                          height: auto;
+                          border-radius: 5px;
+                        }
+                      }
+                    }
+                    > div.description {
+                      @include box-flex(1);
+                      > h5 {
+                        @include full-width;
+                        margin: 0 0 3px 0;
+                        font-size: 13px;
+                        font-weight: bold;
+                        > a {
+                          color: $dark_blue;
+                        }
+                      }
+                      > p {
+                        @include full-width;
+                        font-size: 12px;
+                        line-height: 1.2em;
+                        color: #777;
+                      }
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

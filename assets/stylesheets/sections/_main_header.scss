@@ -1,0 +1,61 @@
+div#view {
+  > div#mw_main_content {
+    > div {
+      > div.mw_main_head {
+        > div {
+          @include box(horizontal, justify, center);
+          height: 55px;
+          padding: 0 10px;
+          background: image-url("bg_top.jpg") no-repeat left top;
+          > div#mw_toggler_menu {
+            @include box-flex(0);
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid $light_blue;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+            > span {
+              @include inline-block;
+              width: 40px;
+              height: 40px;
+              margin: 0;
+              background: image-url("icons/menu.png") no-repeat center center;
+              text-indent: -10000px;
+            }
+          }
+          > div.mw_home {
+            @include box-flex(1);
+            @include box(horizontal, center, center);
+            height: 40px;
+            > a {
+              @include box-flex(0);
+              @include inline-block;
+              width: 194px;
+              height: 36px;
+              background: image-url("logo_petcarerx.png") no-repeat;
+              text-indent: -10000px;
+            }
+          }
+          > div#mw_toggler_shopping_cart {
+            @include box-flex(0);
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid $light_blue;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+            > span {
+              @include inline-block;
+              width: 40px;
+              height: 40px;
+              margin: 0;
+              background: image-url("icons/shopping.png") no-repeat center center;
+              text-indent: -10000px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
